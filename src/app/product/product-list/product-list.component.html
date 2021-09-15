@@ -1,0 +1,9 @@
+<p>product-list works! {{ userService.user.name }}</p>
+
+<ul>
+  <li *ngFor="let product of productList">
+    <a [routerLink]="['/product/detail', product.id]">
+      {{ product.name }} - {{ product.price | currency }}
+    </a>
+  </li>
+</ul>
